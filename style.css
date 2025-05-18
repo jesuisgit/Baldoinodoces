@@ -1,0 +1,52 @@
+body {
+  background-color: #b8c2a5;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* seletor composto */
+header .logo {
+  width: 100px;
+}
+
+/* pseudoclasse */
+nav a:hover {
+  color: #fff;
+  background-color: #7d8b64;
+}
+
+/* pseudoelemento */
+h1::first-letter {
+  color: #7d8b64;
+  font-size: 3rem;
+}
+
+/* outras regras */
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+button {
+  background-color: #7d8b64;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5c674d;
+}
+
+footer {
+  background-color: #e8ecd9;
+  color: #333;
+}
+
+.video-apresentacao {
+  width: 100%;
+  max-width: 600px;
+}

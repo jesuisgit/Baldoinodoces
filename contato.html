@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contato - Baldoino Doces</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container my-5">
+    <h2>Fale Conosco</h2>
+    <form id="formContato">
+      <input type="text" name="nome" placeholder="Nome completo" required><br>
+      <input type="email" name="email" placeholder="Email" required><br>
+      <input type="tel" name="telefone" placeholder="Telefone"><br>
+      <select name="assunto">
+        <option value="elogio">Elogio</option>
+        <option value="reclamacao">Reclamação</option>
+        <option value="outro">Outro</option>
+      </select><br>
+      <label><input type="checkbox" name="newsletter"> Quero receber novidades</label><br>
+      <textarea name="mensagem" placeholder="Mensagem"></textarea><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>
