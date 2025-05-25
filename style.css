@@ -1,86 +1,156 @@
+:root {
+  --primary-color: #a58b6f;
+  --primary-light: #d4b999;
+  --primary-dark: #7a634c;
+  --text-color: #333;
+  --light-bg: #fffaf5;
+}
+
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #b8c2a5;
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  background-color: #f9f5f0;
   margin: 0;
   padding: 0;
-  color: #333;
+  line-height: 1.6;
 }
 
 .text-logo {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 3rem;
-}
-
-.carousel-item img {
-  max-height: 400px;
-  object-fit: cover;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 .espaco-destaque {
-  background-color: #fffaf5;
+  background-color: var(--light-bg);
   text-align: justify;
 }
 
 .espaco-destaque h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
 }
 
 .espaco-destaque p {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
-#button-addon1,
-i {
-  color: #ffc371;
+.gallery {
+  width: 100%;
+  margin: 0 auto;
 }
 
-.form-control::placeholder {
-  font-size: 0.95rem;
-  color: #aaa;
-  font-style: italic;
-}
-
-.carrossel-simples {
-  padding: 2rem;
-  background-color: #fffaf5;
-}
-
-.carousel-container {
-  display: flex;
-  overflow-x: auto;
-  gap: 1rem;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 1rem;
-}
-
-.carousel-container img {
-  flex: 0 0 auto;
-  width: 250px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-  scroll-snap-align: start;
+.gallery-cell {
+  width: 28%;
+  height: 250px;
+  margin-right: 15px;
+  counter-increment: gallery-cell;
   transition: transform 0.3s ease;
 }
 
-.carousel-container img:hover {
+.gallery-cell:hover {
   transform: scale(1.05);
-  cursor: pointer;
 }
 
+.gallery-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+/* estilo responsivo */
 @media (max-width: 768px) {
-  .footer-wecoffee .container {
-    flex-direction: column;
-    text-align: center;
+  .gallery-cell {
+    width: 50%;
+    height: 200px;
+  }
+  
+  .text-logo {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-cell {
+    width: 80%;
+    height: 180px;
+  }
+  
+  .text-logo {
+    font-size: 1.8rem;
+  }
+}
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark) !important;
+  color: white !important;
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+.carrossel-destaque {
+  padding: 4rem 0;
+}
+
+.carrossel-destaque h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+:root {
+  --primary-dark: #ffffff;     /* 25% mais escura */
+  --text-color: #ffffff;          /* Cor do texto padrão */
+}
+
+ .instagram-post {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+  
+  .instagram-post img:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+  }
+  
+  .instagram-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(165, 139, 111, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .instagram-post:hover .instagram-hover {
+    opacity: 1;
   }
 
-  .footer-wecoffee .footer-social {
-    margin-top: 10px;
-  }
-
-  .footer-wecoffee .footer-links {
-    margin: 15px 0;
-  }
+/* Adicione no seu CSS para efeito 3D */
+.rounded-lg {
+  border-radius: 15px !important;
+  transform: perspective(1000px) rotateY(-10deg);
+  transition: transform 0.5s ease;
+}
+.rounded-lg:hover {
+  transform: perspective(1000px) rotateY(0deg);
 }

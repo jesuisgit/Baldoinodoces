@@ -3,136 +3,271 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Baldoino Doces </title>
+  <title>Baldoino Doces</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <!-- Google Fonts para a fonte do footer -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <style>
+    :root {
+      --primary-color: #a58b6f;
+      --primary-light: #d4b999;
+      --primary-dark: #7a634c;
+      --text-color: #333;
+      --light-bg: #fffaf5;
+    }
+  </style>
 </head>
 <body>
 
   <!-- NAVBAR -->
   <header>
     <nav class="navbar navbar-expand-lg bg-white border-bottom">
-      <div class="container">
+      <section class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
           <img src="logo.png" alt="Logo Baldoino Doces" width="80" />
-          <span class="text-logo">Baldoino Doces</span>
+          <span class="text-logo" style="color: var(--primary-color);">Baldoino Doces</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <section class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-            <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
-            <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
-            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html" style="color: var(--primary-dark);">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="produtos.html" style="color: var(--primary-dark);">Produtos</a></li>
+            <li class="nav-item"><a class="nav-link" href="sobre.html" style="color: var(--primary-dark);">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="contato.html" style="color: var(--primary-dark);">Contato</a></li>
           </ul>
-        </div>
-      </div>
+        </section>
+      </section>
     </nav>
   </header>
 
   <!-- BANNER -->
-  <section class="banner mt-3">
+  <figure class="banner">
     <img src="banner.png" class="img-fluid w-100" alt="Banner Baldoino Doces" />
-  </section>
+  </figure>
 
+  
+<section class="instagram-section py-5" style="background-color: #fffaf5;">
+  <div class="container">
+    <h2 class="text-center mb-3" style="color: #a58b6f; font-family: 'Playfair Display', serif;">Nosso Instagram</h2>
+    <p class="text-center mb-4">
+      <a href="https://www.instagram.com/baldoinodoces/" target="_blank" style="color: #7a634c; text-decoration: none;">
+        @baldoinodoces
+      </a>
+    </p>
+    
+    <div class="row g-3">
+      <!-- Post 1 -->
+      <div class="col-6 col-md-3">
+        <a href="https://www.instagram.com/baldoinodoces/p/DIT3sDeR67W/" target="_blank" class="instagram-post">
+          <div class="image-container" style="width: 100%; padding-top: 100%; position: relative; overflow: hidden;">
+            <img src="insta1.png" 
+                 alt="Doce Baldoino" 
+                 class="img-fluid rounded shadow-sm"
+                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border: 2px solid #d4b999; transition: transform 0.3s ease;">
+          </div>
+          <div class="instagram-hover">
+            <i class="fab fa-instagram" style="color: white; font-size: 1.5rem;"></i>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Post 2 -->
+      <div class="col-6 col-md-3">
+        <a href="https://www.instagram.com/baldoinodoces/p/DJXdyouy-A7/" target="_blank" class="instagram-post">
+          <div class="image-container" style="width: 100%; padding-top: 100%; position: relative; overflow: hidden;">
+            <img src="insta2.png" 
+                 alt="Doce Baldoino" 
+                 class="img-fluid rounded shadow-sm"
+                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border: 2px solid #d4b999; transition: transform 0.3s ease;">
+          </div>
+        </a>
+      </div>
+      
+      <!-- Post 3 -->
+      <div class="col-6 col-md-3">
+        <a href="https://www.instagram.com/baldoinodoces/p/C_gJELRPInO/" target="_blank" class="instagram-post">
+          <div class="image-container" style="width: 100%; padding-top: 100%; position: relative; overflow: hidden;">
+            <img src="insta3.png" 
+                 alt="Doce Baldoino" 
+                 class="img-fluid rounded shadow-sm"
+                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border: 2px solid #d4b999; transition: transform 0.3s ease;">
+          </div>
+        </a>
+      </div>
+      
+      <!-- Post 4 -->
+      <div class="col-6 col-md-3">
+        <a href="https://www.instagram.com/baldoinodoces/p/C2svUNCRn2r/" target="_blank" class="instagram-post">
+          <div class="image-container" style="width: 100%; padding-top: 100%; position: relative; overflow: hidden;">
+            <img src="insta4.png" 
+                 alt="Doce Baldoino" 
+                 class="img-fluid rounded shadow-sm"
+                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border: 2px solid #d4b999; transition: transform 0.3s ease;">
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="text-center mt-4">
+      <a href="https://www.instagram.com/baldoinodoces/" target="_blank" 
+         class="btn mt-3" 
+         style="background-color: #a58b6f; color: white; border-radius: 20px;">
+        Ver Mais no Instagram
+      </a>
+    </div>
+  </div>
   <!-- SEÇÃO DESTAQUE -->
-  <section class="espaco-destaque py-5 mt-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 text-center">
-          <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/2e31b9f2-8efc-47b7-8b33-9c95cfcd716f/202504121330_I96P_.jpeg" alt="Doce especial Baldoino" class="img-fluid rounded" style="max-width: 400px;">
-        </div>
-        <div class="col-md-6 text-md-left text-center mt-4 mt-md-0">
-          <h6 class="text-uppercase text-muted">Compromisso com a qualidade</h6><br>
-          <h2 class="font-weight-bold" style="color: #a58b6f; text-align:left;">
+  <article class="espaco-destaque py-5 mt-5">
+    <section class="container">
+      <section class="row align-items-center">
+        <figure class="col-md-6 text-center">
+          <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/2e31b9f2-8efc-47b7-8b33-9c95cfcd716f/202504121330_I96P_.jpeg" alt="Doce especial Baldoino" class="img-fluid rounded" style="max-width: 400px; border: 3px solid var(--primary-color);">
+        </figure>
+        <section class="col-md-6 text-md-left text-center mt-4 mt-md-0">
+          <h6 class="text-uppercase" style="color: var(--primary-dark); letter-spacing: 2px;">Compromisso com a qualidade</h6><br>
+          <h2 class="font-weight-bold" style="color: var(--primary-color); text-align:left; font-family: 'Playfair Display', serif;">
             Fabricação própria com reposição diária
           </h2>
-          <p class="lead" style="color: #a58b6f; text-align: justify;">
-            <strong>Nossos processos são otimizados para garantir que todos os produtos sejam entregues fresquinhos para você.</strong>
+          <p class="lead" style="color: var(--text-color); text-align: justify; font-family: 'Roboto', sans-serif;">
+            <strong style="color: var(--primary-dark);">Nossos processos são otimizados para garantir que todos os produtos sejam entregues fresquinhos para você.</strong>
             Nossos pães e doces são produzidos e repostos diariamente. Prezamos pela qualidade e excelência em cada detalhe.
           </p>
-          <a href="#produtos" class="btn btn-outline-light" style="background-color: #a58b6f; color: white;">Conheça mais</a>
-        </div>
+          <a href="#produtos" class="btn" style="background-color: var(--primary-color); color: white; font-family: 'Roboto', sans-serif;">Conheça mais</a>
+        </section>
+      </section>
+    </section>
+  </article>
+
+  <!-- CARROSSEL -->
+  <section class="carrossel-destaque py-3" style="background-color: var(--light-bg);">
+    <h2 class="text-center mb-4" style="font-family: 'Playfair Display', serif; color: var(--primary-color);">Doces em destaque</h2><br>
+    
+    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true, "autoPlay": 3000 }'>
+      <div class="gallery-cell">
+        <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/2e31b9f2-8efc-47b7-8b33-9c95cfcd716f/202504301328_79Q3_.jpeg" alt="Doce 1" class="img-fluid rounded" style="border: 2px solid var(--primary-light);">
+      </div>
+      <div class="gallery-cell">
+        <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/2e31b9f2-8efc-47b7-8b33-9c95cfcd716f/202503290227_5TQ2_.jpeg" alt="Doce 2" class="img-fluid rounded" style="border: 2px solid var(--primary-light);">
+      </div>
+      <div class="gallery-cell">
+        <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/2e31b9f2-8efc-47b7-8b33-9c95cfcd716f/202503291301_78WP_.jpeg" alt="Doce 3" class="img-fluid rounded" style="border: 2px solid var(--primary-light);">
+      </div>
+      <div class="gallery-cell">
+        <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/2e31b9f2-8efc-47b7-8b33-9c95cfcd716f/202503290137_1KJT_.jpeg" alt="Doce 4" class="img-fluid rounded" style="border: 2px solid var(--primary-light);">
       </div>
     </div>
   </section>
 
-  <!-- CARROSSEL -->
-<section class="carrossel-simples">
-  <h2 class="text-center mb-4">Doces em destaque</h2>
-  <div class="carousel-container">
-    <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/2e31b9f2-8efc-47b7-8b33-9c95cfcd716f/202504301328_79Q3_.jpeg" alt="Doce 1">
-    <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/2e31b9f2-8efc-47b7-8b33-9c95cfcd716f/202503290227_5TQ2_.jpeg" alt="Doce 2">
-    <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/2e31b9f2-8efc-47b7-8b33-9c95cfcd716f/202503291301_78WP_.jpeg" alt="Doce 3">
-    <img src="https://static.ifood-static.com.br/image/upload/t_medium/pratos/2e31b9f2-8efc-47b7-8b33-9c95cfcd716f/202503290137_1KJT_.jpeg" alt="Doce 4">
+    <!-- SEÇÃO IFOOD -->
+<section class="ifood-section py-5 mt-3" style="background-color: #fff1e6;">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Texto -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h2 class="mb-4" style="color: #ea1d2c; font-family: 'Playfair Display', serif;">
+          Peça pelo iFood
+        </h2>
+        <p class="lead" style="color: #333; margin-bottom: 1.5rem;">
+          Seus doces favoritos entregues na porta da sua casa!
+        </p>
+        <ul style="color: #5a5a5a; list-style-type: none; padding-left: 0;">
+          <li class="mb-2"><i class="fas fa-check-circle" style="color: #a58b6f; margin-right: 10px;"></i> Entregas rápidas</li>
+          <li class="mb-2"><i class="fas fa-check-circle" style="color: #a58b6f; margin-right: 10px;"></i> Pagamento seguro</li>
+          <li class="mb-2"><i class="fas fa-check-circle" style="color: #a58b6f; margin-right: 10px;"></i> Promoções exclusivas</li>
+        </ul>
+        <a href="https://www.ifood.com.br/delivery/sao-paulo-sp/baldoino-doces-vila-canero/2e31b9f2-8efc-47b7-8b33-9c95cfcd716f" 
+           target="_blank" 
+           class="btn btn-lg mt-3" 
+           style="background-color: #ea1d2c; color: white; border-radius: 8px; font-weight: 600;">
+          <i class="fas fa-shopping-bag mr-2"></i> Pedir Agora
+        </a>
+      </div>
+      
+      <!-- Imagem -->
+      <div class="col-md-6 text-center">
+        <img src="ifood.png" 
+             alt="Baldoino Doces no iFood" 
+             class="img-fluid rounded-lg shadow" 
+             style="max-width: 100%; border: 3px solid #ea1d2c;">
+      </div>
+    </div>
   </div>
 </section>
 
+</section><!-- whatsapp -->
+<a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" style="position: fixed; right: 20px; bottom: 20px; background-color: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; text-align: center; font-size: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 100;">
+  <i class="fab fa-whatsapp" style="line-height: 60px;"></i>
+</a>
+
   <!-- RODAPÉ -->
   <footer class="bg-white">
-    <div class="container py-5">
-      <div class="row mb-4 text-center">
-        <div class="col">
-          <h1 class="display-4 text-dark">Baldoino Doces</h1>
-          <p class="lead text-muted mb-0">Produtos caseiros feitos com amor</p>
-        </div>
-      </div>
+    <section class="container py-1">
+      <header class="row mb-4 text-center">
+        <section class="col">
+          <h1 class="display-4" style="color: var(--primary-color); font-family: 'Playfair Display', serif;">Baldoino Doces</h1>
+          <p class="lead mb-0" style="color: var(--text-color); font-family: 'Roboto', sans-serif;">Produtos caseiros feitos com amor</p>
+        </section>
+      </header>
 
-      <div class="row py-4">
-        <div class="col-lg-4 col-md-6 mb-4">
+      <section class="row py-4">
+        <article class="col-lg-4 col-md-6 mb-4">
           <img src="logo.png" alt="Logo Baldoino Doces" width="150" class="mb-3">
-          <p class="font-italic text-muted">Doces caseiros feitos com carinho e qualidade.</p>
-          <ul class="list-inline mt-4">
-            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter text-dark"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f text-dark"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram text-dark"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest text-dark"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-tiktok text-dark"></i></a></li>
-          </ul>
-        </div>
+          <p style="color: var(--text-color); font-family: 'Roboto', sans-serif;">Doces caseiros feitos com carinho e qualidade.</p>
+          <nav class="list-inline mt-4">
+  <a href="#" class="list-inline-item"><i class="fab fa-x-twitter" style="color: var(--primary-color);"></i></a>
+  <a href="#" class="list-inline-item"><i class="fab fa-facebook-f" style="color: var(--primary-color);"></i></a>
+  <a href="#" class="list-inline-item"><i class="fab fa-instagram" style="color: var(--primary-color);"></i></a>
+  <a href="#" class="list-inline-item"><i class="fab fa-pinterest" style="color: var(--primary-color);"></i></a>
+  <a href="#" class="list-inline-item"><i class="fab fa-tiktok" style="color: var(--primary-color);"></i></a>
+</nav>
+        </article>
 
-        <div class="col-lg-2 col-md-6 mb-4">
-          <h6 class="text-uppercase font-weight-bold mb-4">Produtos</h6>
-          <ul class="list-unstyled mb-0">
-            <li><a href="#" class="text-muted">Doces Gourmet</a></li>
-            <li><a href="#" class="text-muted">Festas</a></li>
-            <li><a href="#" class="text-muted">Presentes</a></li>
-            <li><a href="#" class="text-muted">Combos</a></li>
-          </ul>
-        </div>
+        <article class="col-lg-2 col-md-6 mb-4">
+          <h6 class="text-uppercase font-weight-bold mb-4" style="color: var(--primary-dark); font-family: 'Playfair Display', serif;">Produtos</h6>
+          <nav class="list-unstyled mb-0">
+            <a href="#" class="d-block mb-2" style="color: var(--text-color); font-family: 'Roboto', sans-serif;">Doces Gourmet</a>
+            <a href="#" class="d-block mb-2" style="color: var(--text-color); font-family: 'Roboto', sans-serif;">Festas</a>
+            <a href="#" class="d-block mb-2" style="color: var(--text-color); font-family: 'Roboto', sans-serif;">Presentes</a>
+            <a href="#" class="d-block mb-2" style="color: var(--text-color); font-family: 'Roboto', sans-serif;">Combos</a>
+          </nav>
+        </article>
 
-        <div class="col-lg-2 col-md-6 mb-4">
-          <h6 class="text-uppercase font-weight-bold mb-4">Institucional</h6>
-          <ul class="list-unstyled mb-0">
-            <li><a href="sobre.html" class="text-muted">Sobre</a></li>
-            <li><a href="contato.html" class="text-muted">Contato</a></li>
-            <li><a href="#" class="text-muted">Política de Privacidade</a></li>
-            <li><a href="#" class="text-muted">Termos de uso</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
-          <p class="text-muted">Receba novidades e promoções deliciosas no seu e-mail:</p>
-          <div class="p-1 rounded border">
-            <div class="input-group">
-              <input type="email" placeholder="Seu e-mail" class="form-control border-0 shadow-0">
-              <button class="btn btn-link text-dark"><i class="fas fa-paper-plane"></i></button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bg-light py-4">
-      <div class="container text-center">
-        <p class="text-muted mb-0">© 2025 Baldoino Doces. Todos os direitos reservados.</p>
-      </div>
-    </div>
-  </footer>
+        <article class="col-lg-2 col-md-6 mb-4">
+          <h6 class="text-uppercase font-weight-bold mb-4" style="color: var(--primary-dark); font-family: 'Playfair Display', serif;">Institucional</h6>
+          <nav class="list-unstyled mb-0">
+            <a href="sobre.html" class="d-block mb-2" style="color: var(--text-color); font-family: 'Roboto', sans-serif;">Sobre</a>
+            <a href="contato.html" class="d-block mb-2" style="color: var(--text-color); font-family: 'Roboto', sans-serif;">Contato</a>
+            <a href="#" class="d-block mb-2" style="color: var(--text-color); font-family: 'Roboto', sans-serif;">Política de Privacidade</a>
+            <a href="#" class="d-block mb-2" style="color: var(--text-color); font-family: 'Roboto', sans-serif;">Termos de uso</a>
+          </nav>
+        </article>
+        <article class="col-lg-4 col-md-6">
+          <h6 class="text-uppercase font-weight-bold mb-4" style="color: var(--primary-dark); font-family: 'Playfair Display', serif;">Newsletter</h6>
+          <p style="color: var(--text-color); font-family: 'Roboto', sans-serif;">Receba novidades e promoções deliciosas no seu e-mail:</p>
+          <form class="p-1 rounded border">
+            <section class="input-group">
+              <input type="email" placeholder="Seu e-mail" class="form-control border-0 shadow-0" style="font-family: 'Roboto', sans-serif;">
+              <button type="submit" class="btn" style="background-color: var(--primary-color); color: white;"><i class="fas fa-paper-plane"></i></button>
+            </section>
+          </form>
+        </article>
+      </section>
+    </section>
+    <section class="py-1" style="background-color: var(--primary-light);">
+    <section class="container text-center">
+      <p class="py-6" style=" font-family: 'Roboto', sans-serif;">
+        © 2025 Baldoino Doces. Todos os direitos reservados.
+      </p>
+    </section>
+  </section>
+</footer>
 
   <!-- JS -->
   <script src="scripts.js"></script>
