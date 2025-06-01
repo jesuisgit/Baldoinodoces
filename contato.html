@@ -2,26 +2,40 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Contato - Baldoino Doces</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Formulário de Contato</title>
 </head>
 <body>
-  <main class="container my-5">
-    <h2>Fale Conosco</h2>
-    <form id="formContato">
-      <input type="text" name="nome" placeholder="Nome completo" required><br>
-      <input type="email" name="email" placeholder="Email" required><br>
-      <input type="tel" name="telefone" placeholder="Telefone"><br>
-      <select name="assunto">
-        <option value="elogio">Elogio</option>
-        <option value="reclamacao">Reclamação</option>
-        <option value="outro">Outro</option>
-      </select><br>
-      <label><input type="checkbox" name="newsletter"> Quero receber novidades</label><br>
-      <textarea name="mensagem" placeholder="Mensagem"></textarea><br>
-      <button type="submit">Enviar</button>
-    </form>
-  </main>
+  <h2>Fale Conosco</h2>
+  <form id="formContato">
+    <input type="text" name="nome" placeholder="Nome completo" required>
+    <input type="date" name="nascimento" required>
+
+    <fieldset>
+      <legend>Tipo de cliente:</legend>
+      <label><input type="radio" name="tipo" value="cliente" required> Cliente</label>
+      <label><input type="radio" name="tipo" value="fornecedor"> Fornecedor</label>
+    </fieldset>
+
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="telefone" placeholder="Telefone (somente números)" required pattern="[0-9]{10,11}">
+
+    <select name="assunto" required>
+      <option value="" disabled selected>Selecione um assunto</option>
+      <option value="elogio">Elogio</option>
+      <option value="reclamacao">Reclamação</option>
+      <option value="pedido">Pedido Especial</option>
+      <option value="outro">Outro</option>
+    </select>
+
+    <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+
+    <label>
+      <input type="checkbox" name="newsletter"> Quero receber novidades por email
+    </label>
+
+    <button type="submit">Enviar Mensagem</button>
+  </form>
+
   <script src="scripts.js"></script>
 </body>
 </html>

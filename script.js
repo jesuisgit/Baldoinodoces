@@ -1,14 +1,45 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('formContato');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const dados = new FormData(form);
-      let mensagem = "Dados enviados:\n";
-      for (let [chave, valor] of dados.entries()) {
-        mensagem += `${chave}: ${valor}\n`;
-      }
-      alert(mensagem);
-    });
-  }
+document.addEventListener('DOMContentLoaded', function () {
+  const formContato = document.getElementById('formContato');
+
+  formContato.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nome = formContato.nome.value.trim();
+    const nascimento = formContato.nascimento.value;
+    const tipo = document.querySelector('input[name="tipo"]:checked')?.value;
+    const email = formContato.email.value.trim();
+    const telefone = formContato.telefone.value.trim();
+    const assunto = formContato.assunto.value;
+    const mensagem = formContato.mensagem.value.trim();
+    const newsletter = formContato.newsletter.checked;
+
+    const erros = [];
+
+    if (!nome) erros.push("Nome é obrigatório.");
+    if (!email.includes("@") || !email.includes(".")) erros.push("E-mail inválido.");
+    if (!telefone.match(/^\d{10,11}$/)) erros.push("Telefone deve ter 10 ou 11 números.");
+    if (!nascimento) erros.push("Data de nascimento é obrigatória.");
+    if (!tipo) erros.push("Tipo de cliente deve ser selecionado.");
+    if (!assunto) erros.push("Assunto deve ser selecionado.");
+    if (!mensagem) erros.push("Mensagem é obrigatória.");
+
+    if (erros.length > 0) {
+      alert("Erros no formulário:\n\n" + erros.join("\n"));
+      return;
+    }
+
+    let msg = "=== DADOS DO FORMULÁRIO ===\n\n";
+    msg += `• Nome: ${nome}\n`;
+    msg += `• E-mail: ${email}\n`;
+    msg += `• Telefone: ${telefone}\n`;
+    msg += `• Nascimento: ${nascimento}\n`;
+    msg += `• Tipo: ${tipo}\n`;
+    msg += `• Assunto: ${assunto}\n`;
+    msg += `• Mensagem: ${mensagem}\n`;
+    msg += `• Newsletter: ${newsletter ? "Sim " : "Não "}\n\n`;
+    msg += "Obrigado pelo seu contato!";
+
+    alert(msg);
+    // formContato.reset(); // descomente para limpar o formulário após envio
+  });
 });
