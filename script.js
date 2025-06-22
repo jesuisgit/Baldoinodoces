@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const nome = formContato.nome.value.trim();
       const nascimento = formContato.nascimento.value;
-      const tipo = document.querySelector('input[name="tipo"]:checked')?.value;
+      const tipo = formContato.tipo.value; // apenas esta é necessária
       const email = formContato.email.value.trim();
       const telefone = formContato.telefone.value.trim();
       const assunto = formContato.assunto.value;
