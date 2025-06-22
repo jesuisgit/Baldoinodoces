@@ -45,9 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Preenchimento da tabela via AJAX
+  // Carregar dados da equipe
   const tabela = document.getElementById('tabelaEquipe');
-
   if (tabela) {
     fetch('tabela.json')
       .then(response => response.json())
@@ -63,6 +62,8 @@ document.addEventListener('DOMContentLoaded', function () {
           tbody.appendChild(tr);
         });
       })
-      .catch(error => console.error('Erro ao carregar a tabela:', error));
+      .catch(error => {
+        console.error('Erro ao carregar a tabela:', error);
+      });
   }
 });
