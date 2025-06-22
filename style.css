@@ -15,25 +15,65 @@ body {
   line-height: 1.6;
 }
 
+/* Header e Navbar */
 .text-logo {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   font-weight: 700;
+  color: var(--primary-color);
 }
 
-text-logo::first-letter {
+.text-logo::first-letter {
   font-size: 3.2rem;
   color: var(--primary-dark);
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+  font-weight: 500;
+  color: var(--primary-dark) !important;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+/* Banner */
+.product-banner {
+  background: linear-gradient(rgba(165, 139, 111, 0.7), rgba(165, 139, 111, 0.7)) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  padding: 100px 0;
+  margin-bottom: 50px;
+}
+
+.product-banner h1 {
+  font-family: 'Playfair Display', serif;
+  color: white;
+}
+
+.product-banner p {
+  color: white;
+}
+
+/* Seções comuns */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
 }
 
 .espaco-destaque {
   background-color: var(--light-bg);
   text-align: justify;
+  padding: 4rem 0;
 }
 
 .espaco-destaque h2 {
   font-size: 2.2rem;
   margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
 }
 
 .espaco-destaque p {
@@ -41,19 +81,7 @@ text-logo::first-letter {
   line-height: 1.8;
 }
 
-.gallery {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.gallery-cell {
-  width: 28%;
-  height: 250px;
-  margin-right: 15px;
-  counter-increment: gallery-cell;
-  transition: transform 0.3s ease;
-}
-
+/* Carrossel */
 .gallery-cell:hover {
   transform: scale(1.05);
 }
@@ -62,111 +90,81 @@ text-logo::first-letter {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* estilo responsivo */
-@media (max-width: 768px) {
-  .gallery-cell {
-    width: 50%;
-    height: 200px;
-  }
-  
-  .text-logo {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .gallery-cell {
-    width: 80%;
-    height: 180px;
-  }
-  
-  .text-logo {
-    font-size: 1.8rem;
-  }
-}
-
-.btn {
-  padding: 10px 25px;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background-color: var(--primary-dark) !important;
-  color: white !important;
-}
-
-.nav-link {
-  transition: color 0.3s ease;
-  font-weight: 500;
-}
-
-.nav-link:hover {
-  color: var(--primary-color) !important;
+  border: 2px solid var(--primary-light);
 }
 
 .carrossel-destaque {
   padding: 4rem 0;
+  background-color: var(--light-bg);
 }
 
 .carrossel-destaque h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
 }
 
-:root {
-  --primary-dark: #ffffff;     /* 25% mais escura */
-  --text-color: #ffffff;          /* Cor do texto padrão */
+/* Produtos */
+.product-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  height: 100%;
 }
 
- .instagram-post {
-    position: relative;
-    display: block;
-    overflow: hidden;
-  }
-  
-  .instagram-post img:hover {
-    transform: scale(1.03);
-    opacity: 0.9;
-  }
-  
-  .instagram-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(165, 139, 111, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .instagram-post:hover .instagram-hover {
-    opacity: 1;
-  }
-
-/* Adicione no seu CSS para efeito 3D */
-.rounded-lg {
-  border-radius: 15px !important;
-  transform: perspective(1000px) rotateY(-10deg);
-  transition: transform 0.5s ease;
-}
-.rounded-lg:hover {
-  transform: perspective(1000px) rotateY(0deg);
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(165, 139, 111, 0.2);
 }
 
-/* Estilos do Formulário de Contato */
+.product-img {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid var(--primary-light);
+}
+
+.product-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-dark);
+}
+
+.price-tag {
+  background-color: var(--primary-light);
+  color: white;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.category-filter {
+  margin-bottom: 30px;
+}
+
+.category-btn {
+  border: 2px solid var(--primary-light);
+  color: var(--primary-dark);
+  margin: 5px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover, .category-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* Formulário de Contato */
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
   background-color: var(--light-bg);
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px var(--primary-light);
 }
 
 .contact-form input,
@@ -190,16 +188,12 @@ text-logo::first-letter {
 .contact-fieldset legend {
   padding: 0 8px;
   color: var(--primary-dark);
+  font-family: 'Roboto', sans-serif;
 }
 
 .contact-form textarea {
   min-height: 120px;
   resize: vertical;
-}
-
-.newsletter-label {
-  display: block;
-  margin: 16px 0;
 }
 
 .submit-btn {
@@ -208,8 +202,8 @@ text-logo::first-letter {
   padding: 12px 24px;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
   font-size: 1rem;
+  cursor: pointer;
   transition: background-color 0.3s;
   width: 100%;
 }
@@ -218,5 +212,134 @@ text-logo::first-letter {
   background-color: var(--primary-dark);
 }
 
+/* Tabelas */
+.table {
+  margin: 20px auto;
+}
 
+.table th {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.table-bordered th, .table-bordered td {
+  border: 1px solid var(--primary-light);
+}
+
+/* Botões */
+.btn {
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark) !important;
+  color: white !important;
+}
+
+/* Instagram */
+.instagram-post {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.instagram-post img {
+  border: 2px solid var(--primary-light);
+  transition: transform 0.3s ease;
+}
+
+.instagram-post img:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+.instagram-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(165, 139, 111, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.instagram-post:hover .instagram-hover {
+  opacity: 1;
+}
+
+/* Newsletter */
+.newsletter {
+  background-color: var(--light-bg);
+  padding: 4rem 0;
+}
+
+.newsletter h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+  background-color: white;
+}
+
+footer h1, footer h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+footer h1 {
+  color: var(--primary-color);
+}
+
+footer h6 {
+  color: var(--primary-dark);
+}
+
+footer p, footer a {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+}
+
+footer a:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom {
+  background-color: var(--primary-light);
+  padding: 1rem 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .gallery-cell {
+    width: 50%;
+    height: 200px;
+  }
+  
+  .text-logo {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-cell {
+    width: 80%;
+    height: 180px;
+  }
+  
+  .text-logo {
+    font-size: 1.8rem;
+  }
+  
+  .product-banner {
+    padding: 60px 0;
+  }
+}
 
